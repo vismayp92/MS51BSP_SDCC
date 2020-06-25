@@ -11,14 +11,14 @@
 //***********************************************************************************************************
 
 //***********************************************************************************************************
-//  File Function: MS51 interrupt vector list
+//  File Function: MS51 __interrupt vector list
 //***********************************************************************************************************
-#include "MS51_8K.H"
+#include "MS51_16K.H"
 
 
-/*all interrupt subroutine list */
+/*all __interrupt subroutine list */
 //-----------------------------------------------------------------------------------------------------------
-void INT0_ISR(void) interrupt 0          // Vector @  0x03
+void INT0_ISR(void) __interrupt 0          // Vector @  0x03
 {
     _push_(SFRS);
   
@@ -27,7 +27,7 @@ void INT0_ISR(void) interrupt 0          // Vector @  0x03
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void Timer0_ISR(void) interrupt 1        // Vector @  0x0B
+void Timer0_ISR(void) __interrupt 1        // Vector @  0x0B
 {
     _push_(SFRS);
   
@@ -36,7 +36,7 @@ void Timer0_ISR(void) interrupt 1        // Vector @  0x0B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void INT1_ISR(void) interrupt 2          // Vector @  0x13
+void INT1_ISR(void) __interrupt 2          // Vector @  0x13
 {
     _push_(SFRS);
   
@@ -45,7 +45,7 @@ void INT1_ISR(void) interrupt 2          // Vector @  0x13
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void Timer1_ISR(void) interrupt 3        // Vector @  0x1B
+void Timer1_ISR(void) __interrupt 3        // Vector @  0x1B
 {
     _push_(SFRS);
   
@@ -54,7 +54,7 @@ void Timer1_ISR(void) interrupt 3        // Vector @  0x1B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void UART0_ISR(void) interrupt 4         // Vector @  0x23
+void UART0_ISR(void) __interrupt 4         // Vector @  0x23
 {
     _push_(SFRS);
   
@@ -64,7 +64,7 @@ void UART0_ISR(void) interrupt 4         // Vector @  0x23
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void Timer2_ISR(void) interrupt 5        // Vector @  0x2B
+void Timer2_ISR(void) __interrupt 5        // Vector @  0x2B
 {
     _push_(SFRS);
   
@@ -73,7 +73,7 @@ void Timer2_ISR(void) interrupt 5        // Vector @  0x2B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void I2C_ISR(void) interrupt 6           // Vector @  0x33
+void I2C_ISR(void) __interrupt 6           // Vector @  0x33
 {
     _push_(SFRS);
   
@@ -82,7 +82,7 @@ void I2C_ISR(void) interrupt 6           // Vector @  0x33
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void Pin_INT_ISR(void) interrupt 7       // Vector @  0x3B
+void Pin_INT_ISR(void) __interrupt 7       // Vector @  0x3B
 {
     _push_(SFRS);
   
@@ -91,7 +91,7 @@ void Pin_INT_ISR(void) interrupt 7       // Vector @  0x3B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void BOD_ISR(void) interrupt 8           // Vector @  0x43
+void BOD_ISR(void) __interrupt 8           // Vector @  0x43
 {
     _push_(SFRS);
   
@@ -100,7 +100,7 @@ void BOD_ISR(void) interrupt 8           // Vector @  0x43
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void SPI_ISR(void) interrupt 9           // Vector @  0x4B
+void SPI_ISR(void) __interrupt 9           // Vector @  0x4B
 {
     _push_(SFRS);
   
@@ -109,7 +109,7 @@ void SPI_ISR(void) interrupt 9           // Vector @  0x4B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void WDT_ISR(void) interrupt 10          // Vector @  0x53
+void WDT_ISR(void) __interrupt 10          // Vector @  0x53
 {
     _push_(SFRS);
   
@@ -118,7 +118,7 @@ void WDT_ISR(void) interrupt 10          // Vector @  0x53
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void ADC_ISR(void) interrupt 11          // Vector @  0x5B
+void ADC_ISR(void) __interrupt 11          // Vector @  0x5B
 {
     _push_(SFRS);
   
@@ -127,7 +127,7 @@ void ADC_ISR(void) interrupt 11          // Vector @  0x5B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void Capture_ISR(void) interrupt 12      // Vector @  0x63
+void Capture_ISR(void) __interrupt 12      // Vector @  0x63
 {
     _push_(SFRS);
   
@@ -138,7 +138,7 @@ void Capture_ISR(void) interrupt 12      // Vector @  0x63
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void PWM_Brake_ISR(void) interrupt 14    // Vector @  0x73
+void PWM_Brake_ISR(void) __interrupt 14    // Vector @  0x73
 {
     _push_(SFRS);
   
@@ -147,7 +147,7 @@ void PWM_Brake_ISR(void) interrupt 14    // Vector @  0x73
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void UART1_ISR(void) interrupt 15    			// Vector @  0x7B
+void UART1_ISR(void) __interrupt 15    			// Vector @  0x7B
 {
     _push_(SFRS);
   
@@ -157,7 +157,7 @@ void UART1_ISR(void) interrupt 15    			// Vector @  0x7B
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void Timer3_ISR(void) interrupt 16    		// Vector @  0x83
+void Timer3_ISR(void) __interrupt 16    		// Vector @  0x83
 {
     _push_(SFRS);
   
@@ -166,7 +166,7 @@ void Timer3_ISR(void) interrupt 16    		// Vector @  0x83
     _pop_(SFRS);
 }
 //-----------------------------------------------------------------------------------------------------------
-void WKT_ISR(void) interrupt 17    				// Vector @  0x8B
+void WKT_ISR(void) __interrupt 17    				// Vector @  0x8B
 {
     _push_(SFRS);
   

@@ -9,9 +9,9 @@
   E-Mail : MicroC-8bit@nuvoton.com
 ************************************************************************************************************/
 
-#include "MS51_32K.h"
+#include "MS51_16K.h"
 
-unsigned char xdata IAPSPDataBuf[127];
+unsigned char __xdata IAPSPDataBuf[127];
 
 
 

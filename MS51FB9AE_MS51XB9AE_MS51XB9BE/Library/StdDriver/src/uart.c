@@ -10,11 +10,11 @@
 /*  Date   : Jan/21/2020                                                                                   */
 /***********************************************************************************************************/
 #include "MS51_16K.H"
-bit PRINTFG = 0, uart0_receive_flag = 0, uart1_receive_flag;
+__bit PRINTFG = 0, uart0_receive_flag = 0, uart1_receive_flag;
 unsigned char uart0_receive_data, uart1_receive_data;
 
 
-void Serial_ISR(void) interrupt 4
+void Serial_ISR(void) __interrupt 4
 {
     _push_(SFRS);
   
@@ -38,7 +38,7 @@ void Serial_ISR(void) interrupt 4
 
 
 
-void SerialPort1_ISR(void) interrupt 15
+void SerialPort1_ISR(void) __interrupt 15
 {
     _push_(SFRS);
   

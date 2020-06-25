@@ -5,5 +5,5 @@
 /*---------------------------------------------------------------------------------------------------------*/
 
 #include "MS51_16K.h"
-bit BIT_TMP;
-unsigned char data  TA_REG_TMP,BYTE_TMP;
+__bit BIT_TMP;
+unsigned char __data  TA_REG_TMP,BYTE_TMP;

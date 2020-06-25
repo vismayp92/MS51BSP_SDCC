@@ -3,9 +3,9 @@
 /*  All IP function define for Nuvoton MS51FB9AE / MS51XB9AE / MS51XB9BE                */
 /*--------------------------------------------------------------------------------------*/
 
-extern bit BIT_TMP;
+extern __bit BIT_TMP;
 
-typedef bit                   BIT;
+typedef __bit                   BIT;
 typedef unsigned char         UINT8;
 typedef unsigned int          UINT16;
 typedef unsigned long         UINT32;
@@ -59,7 +59,7 @@ typedef unsigned long         uint32_t;
 
 #define nop _nop_();            ((UINT8)((v1)>>8))   
 /****************************************************************************/
-/* Software loop delay by HIRC, about 3ms 
+/* Software loop delay by HIRC, about 3ms 									*/
 /****************************************************************************/
 #define _delay_()                      \
 {                                      \
@@ -353,7 +353,7 @@ typedef unsigned long         uint32_t;
 #endif
 
 /****************************************************************************************************************/
-/* Define TIMER VALUE setting is base on name with Fsys value
+/* Define TIMER VALUE setting is base on name with Fsys value 													*/
 /****************************************************************************************************************/
 /* define timer base value Fsys = 16MHz */
 #define    TIMER_DIV12_VALUE_10us_FOSC_160000       65536-8    //13*12/16000000 = 10 uS,        // Timer divider = 12 for TM0/TM1

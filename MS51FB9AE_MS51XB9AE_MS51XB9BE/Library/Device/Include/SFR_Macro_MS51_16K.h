@@ -4,11 +4,13 @@
 /*  <Define rule I> set or clr _ regsiter name _ register bit name                      */
 /*--------------------------------------------------------------------------------------*/
 /******************************************************************************/
-/*                         Keil C51 include files                            */
+/*                        SDCC MCS51 include files                            */
 /******************************************************************************/
-#include <intrins.h>
+//#include <intrins.h>
+#define _push_(x)		__asm push _##x __endasm
+#define _pop_(x)		__asm pop _##x __endasm
 #include <stdio.h>
-#include <absacc.h>
+//#include <absacc.h>
 #include <string.h>
 
 /******************************************************************************/
@@ -672,7 +674,7 @@
 /**** PWM0H    D2H ****/
 /**** PWM1H    D3H ****/
 /**** PWM2H    D4H ****/
-/**** PWM3H    D5H  ****
+/**** PWM3H    D5H  ****/
 
 /**** FBD    D7H ****/
 #define set_FBD_FBF             FBD|=0x80
@@ -1151,7 +1153,7 @@
 
 /**** TH1    8AH ****/ 
 /**** TH0    8BH ****/ 
-/**** TL1    8CH  **** 
+/**** TL1    8CH  ****/ 
 /**** TL0    8DH ****/ 
 
 /**** CKCON  8EH ****/
@@ -1788,7 +1790,7 @@
 /**** PWM0H    D2H ****/
 /**** PWM1H    D3H ****/
 /**** PWM2H    D4H ****/
-/**** PWM3H    D5H  ****
+/**** PWM3H    D5H  ****/
 
 /**** PNP      D6H ****/
 #define set_PNP5                 PNP|=0x20

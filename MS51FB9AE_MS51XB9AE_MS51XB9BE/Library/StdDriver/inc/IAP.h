@@ -10,11 +10,11 @@
 #define     BYTE_READ_CONFIG         0xC0
 #define     BYTE_PROGRAM_CONFIG      0xE1
 
-extern unsigned char xdata DIDBuffer[4];
-extern unsigned char xdata UIDBuffer[12];
-extern unsigned char xdata UCIDBuffer[12];
-extern unsigned char xdata IAPDataBuf[128];
-extern unsigned char xdata IAPCFBuf[5];
+extern unsigned char __xdata DIDBuffer[4];
+extern unsigned char __xdata UIDBuffer[12];
+extern unsigned char __xdata UCIDBuffer[12];
+extern unsigned char __xdata IAPDataBuf[128];
+extern unsigned char __xdata IAPCFBuf[5];
 
 void Trigger_IAP(void);
 void Erase_LDROM(unsigned int u16IAPStartAddress, unsigned int u16IAPDataSize);

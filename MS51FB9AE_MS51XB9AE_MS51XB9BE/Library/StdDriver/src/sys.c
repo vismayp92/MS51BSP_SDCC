@@ -11,8 +11,8 @@
 //***********************************************************************************************************
 #include "MS51_16K.H"
 
-bit BIT_TMP;
-unsigned char data  TA_REG_TMP,BYTE_TMP,SFRS_TMP;
+__bit BIT_TMP;
+unsigned char __data  TA_REG_TMP,BYTE_TMP,SFRS_TMP;
 
   /**
   * @brief This API configures modify system HIRC value
@@ -25,10 +25,11 @@ unsigned char data  TA_REG_TMP,BYTE_TMP,SFRS_TMP;
   */
  void MODIFY_HIRC(unsigned char u8HIRCSEL)
 {
-    unsigned char data hircmap0,hircmap1;
+    unsigned char __data hircmap0,hircmap1;
     unsigned int trimvalue16bit;
     /* Check if power on reset, modify HIRC */
-    SFRS = 0 ;
+    //SFRS = 0 ;
+	clr_SFRS_SFRPAGE;
     switch (u8HIRCSEL)
     {
       case HIRC_24:

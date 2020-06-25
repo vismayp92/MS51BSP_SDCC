@@ -1,4 +1,4 @@
-extern unsigned char xdata IAPSPDataBuf[127];
+extern unsigned char __xdata IAPSPDataBuf[127];
 
 void Erase_SPROM(void);
 void Erase_Verify_SPROM(unsigned int u16IAPDataSize);

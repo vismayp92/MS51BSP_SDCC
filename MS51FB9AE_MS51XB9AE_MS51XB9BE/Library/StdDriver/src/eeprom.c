@@ -12,7 +12,7 @@
 
 
 
-volatile unsigned char xdata page_buffer[128];
+volatile unsigned char __xdata page_buffer[128];
 
 /**
  * @brief       Read Dataflash 
@@ -20,7 +20,7 @@ volatile unsigned char xdata page_buffer[128];
  * @return      Dataflash Value
  * @details     None
  */
-unsigned char Read_APROM_BYTE(unsigned int code *u16_addr)
+unsigned char Read_APROM_BYTE(unsigned int __code *u16_addr)
 {
     UINT8 rdata;
     rdata = *u16_addr>>8;
@@ -46,7 +46,7 @@ void Write_DATAFLASH_BYTE(unsigned int u16EPAddr,unsigned char u8EPData)
 //Save APROM data to XRAM0
   for(looptmp=0;looptmp<0x80;looptmp++)
   {
-    RAMtmp = Read_APROM_BYTE((unsigned int code *)(u16_addrl_r+looptmp));
+    RAMtmp = Read_APROM_BYTE((unsigned int __code *)(u16_addrl_r+looptmp));
     page_buffer[looptmp]=RAMtmp;
   }
 // Modify customer data in XRAM
@@ -101,15 +101,15 @@ void Read_DATAFLASH_ARRAY(unsigned int u16_addr,unsigned char *pDat,unsigned int
 {
   unsigned int i;
   for(i=0;i<num;i++)
-    pDat[i] = *(unsigned char code *)(u16_addr+i);
+    pDat[i] = *(unsigned char __code *)(u16_addr+i);
 }
 
 //-----------------------------------------------------------------------------------------------------------
 unsigned char WriteDataToOnePage(unsigned int u16_addr,const unsigned char *pDat,unsigned char num)
 {
   unsigned char i,offset;
-  unsigned char code *pCode;
-  unsigned char xdata xd_tmp[128];
+  unsigned char __code *pCode;
+  unsigned char __xdata xd_tmp[128];
 
   set_CHPCON_IAPEN; 
   set_IAPUEN_APUEN;
@@ -117,7 +117,7 @@ unsigned char WriteDataToOnePage(unsigned int u16_addr,const unsigned char *pDat
   offset=u16_addr&0x007F;
   i = PAGE_SIZE - offset;
   if(num>i)num=i;
-  pCode = (unsigned char code *)u16_addr;
+  pCode = (unsigned char __code *)u16_addr;
   for(i=0;i<num;i++)
   {
     if(pCode[i]!=0xFF)break;
@@ -142,7 +142,7 @@ unsigned char WriteDataToOnePage(unsigned int u16_addr,const unsigned char *pDat
   else
   {
     WriteDataToPage20:
-    pCode = (unsigned char code *)(u16_addr&0xff80);
+    pCode = (unsigned char __code *)(u16_addr&0xff80);
     for(i=0;i<128;i++)
     {
       xd_tmp[i] = pCode[i];

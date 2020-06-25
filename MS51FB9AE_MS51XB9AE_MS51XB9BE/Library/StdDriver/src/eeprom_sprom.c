@@ -18,7 +18,7 @@
  * @return      Dataflash Value
  * @details     None
  */
- unsigned char Read_SPROM_BYTE(unsigned char code *u8_addr)
+ unsigned char Read_SPROM_BYTE(unsigned char __code *u8_addr)
 {
     unsigned char rdata;
     set_IAPUEN_SPMEN;
@@ -54,15 +54,15 @@ void Read_SPROM_DATAFLASH_ARRAY(unsigned int u16_addr, unsigned char *pDat, unsi
 
     set_IAPUEN_SPMEN;
     for (i = 0; i < num; i++)
-        pDat[i] = *(unsigned char code *)(u16_addr+0xFF80 + i);
+        pDat[i] = *(unsigned char __code *)(u16_addr+0xFF80 + i);
 }
 
 //-----------------------------------------------------------------------------------------------------------
 unsigned char WriteDataToSPOnePage(unsigned int u16_addr, const unsigned char *pDat, unsigned char num)
 {
     unsigned char i, offset;
-    unsigned char code *pCode;
-    unsigned char xdata xd_tmp[127];
+    unsigned char __code *pCode;
+    unsigned char __xdata xd_tmp[127];
 
     set_CHPCON_IAPEN;
     set_IAPUEN_SPMEN;
@@ -73,7 +73,7 @@ unsigned char WriteDataToSPOnePage(unsigned int u16_addr, const unsigned char *p
 
     if (num > i)num = i;
 
-    pCode = (unsigned char code *)(0xFFFF);
+    pCode = (unsigned char __code *)(0xFFFF);
     if (pCode == 0)
     {
             IAPAL = 0x80;
@@ -83,7 +83,7 @@ unsigned char WriteDataToSPOnePage(unsigned int u16_addr, const unsigned char *p
             set_IAPTRG_IAPGO;
     }
     
-    pCode = (unsigned char code *)(u16_addr+0xFF80);
+    pCode = (unsigned char __code *)(u16_addr+0xFF80);
       for (i = 0; i < num; i++)
     {
         if (pCode[i] != 0xFF)break;
@@ -112,7 +112,7 @@ unsigned char WriteDataToSPOnePage(unsigned int u16_addr, const unsigned char *p
     else
     {
 WriteDataToPage20:
-        pCode = (unsigned char code *)(0xFF80);
+        pCode = (unsigned char __code *)(0xFF80);
 
         for (i = 0; i < 128; i++)
         {

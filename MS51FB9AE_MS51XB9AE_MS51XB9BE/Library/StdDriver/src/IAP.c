@@ -10,11 +10,11 @@
 ************************************************************************************************************/
 
 #include "MS51_16K.h"
-unsigned char xdata DIDBuffer[4];
-unsigned char xdata UIDBuffer[12];
-unsigned char xdata UCIDBuffer[12];
-unsigned char xdata IAPDataBuf[128];
-unsigned char xdata IAPCFBuf[5];
+unsigned char __xdata DIDBuffer[4];
+unsigned char __xdata UIDBuffer[12];
+unsigned char __xdata UCIDBuffer[12];
+unsigned char __xdata IAPDataBuf[128];
+unsigned char __xdata IAPCFBuf[5];
 
 void IAP_ERROR(void)
 {
