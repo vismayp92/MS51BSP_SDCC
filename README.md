@@ -1,3 +1,3 @@
 # MS51BSP_SDCC
 SDCC BSP for MS51 series
-Just forked, not ready yet.
+Now support MS51FB9AE_MS51XB9AE_MS51XB9BE (MS51_16K). Hello World tested.
