@@ -24,7 +24,7 @@ sdcc -c %libpath%\putchar.c -I %libpath%\StdDriver\inc\ -I %libpath%\Device\Incl
 del %proname%.ihx
 sdcc ..\..\%proname%.c --iram-size 256 --xram-size 1024 putchar.rel sys.rel uart.rel -I %libpath%\StdDriver\inc\ -I %libpath%\Device\Include\
 cd ..
-del %proname%.bin
-sdobjcopy -Iihex -Obinary .\Objects\%proname%.ihx %proname%.bin
+del main.bin
+sdobjcopy -Iihex -Obinary .\Objects\%proname%.ihx main.bin
 
 pause
