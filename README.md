@@ -32,6 +32,6 @@ __sbit __at (0x87) P07;
  2. __code, __data, __xdata
 
 ## Add or replace
- 1. Add asm macro to replace intrins.h
+ 1. Add asm macro to replace Kintrins.h
  2. Add "buildall.bat".
  3. Add "loadflash.bat".
