@@ -21,7 +21,7 @@ Now support MS51FB9AE_MS51XB9AE_MS51XB9BE (MS51_16K). Hello World tested.
  - Support ICP (In-circuit programming)
  - Support ISP (In-system programming)
  - Support IAP (In-application programming), provide EEPROM purpose.
- - Compatible with N76E003AT20 and STM8S003
+ - Pin to pin compatible with N76E003AT20 and STM8S003.
 
 ## Change
  1. SFR define.
