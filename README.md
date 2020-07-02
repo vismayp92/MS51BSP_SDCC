@@ -3,8 +3,12 @@ Nuvoton MS51 series BSP for Small Device C Compiler (SDCC). <br>
 Now support MS51FB9AE_MS51XB9AE_MS51XB9BE (MS51_16K). Hello World tested. 
 
 ## Usage
- 1. Download and install SDCC. Check "Add to system path" in the end of installation.
- 3. Refer to "SampleCode/Template/Project_temp/SDCC/". Simply clone and double click "buildall.bat".
+ 1. Download and install SDCC. Check "Add to system path" in the end of installation. <br>
+    http://sdcc.sourceforge.net/
+ 2. Download and install Nuvoton Nu-Link command tool. Add to system path manually. <br>
+    https://www.nuvoton.com/tool-and-software/software-development-tool/programmer
+ 3. Restart your computer.
+ 4. Refer to "SampleCode/Template/Project_temp/SDCC/". Simply clone and double click "buildall.bat".
 
 ## Nuvoton MS51FB9AE
  - It's a 25-cent 1T machine cycle enhanced 8051 microcontroller.
