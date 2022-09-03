@@ -16,10 +16,10 @@
 /******************************************************************************/
 /*                         Peripheral header files                            */
 /******************************************************************************/
-#include "Function_define_MS51_16K.h"
+#include "Function_Define_MS51_16K.h"
 #include "sys.h"
 #include "eeprom.h"
-#include "Delay.h"
+#include "delay.h"
 #include "uart.h"
 #include "watchdog.h"
 #include "IAP.h"

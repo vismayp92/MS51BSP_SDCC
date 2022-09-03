@@ -9,11 +9,10 @@ int putchar (int c)
 	return (c);
 }
 #else
-int putchar (int c)
+void putchar (char c)
 {
 	while (!TI);
 	TI = 0;
 	SBUF = c;
-	return c;
 }
 #endif

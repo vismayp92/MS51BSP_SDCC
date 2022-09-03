@@ -8,7 +8,7 @@
 //  Website: http://www.nuvoton.com
 //  E-Mail : MicroC-8bit@nuvoton.com
 //***********************************************************************************************************
-#include "MS51_16K.H"
+#include "MS51_16K.h"
 
 void Enable_WDT_Reset_Config(void)
 {

@@ -10,6 +10,12 @@ Now support MS51FB9AE_MS51XB9AE_MS51XB9BE (MS51_16K). Hello World tested.
  3. Restart your computer.
  4. Refer to "SampleCode/Template/Project_temp/SDCC/". Simply clone and double click "buildall.bat".
 
+## Linux Setup
+ 1. Install SDCC for your Ubuntu/Debian Distribution
+    sudo apt-get update
+    sudo apt-get install sdcc sdcc-ucsim
+ 2. Refer to "SampleCode/Template/Project\_temp/SDCC/" for "buildall.sh".
+
 ## Nuvoton MS51FB9AE
  - It's a 25-cent 1T machine cycle enhanced 8051 microcontroller.
  - Internal 24MHz high-speed oscillator.

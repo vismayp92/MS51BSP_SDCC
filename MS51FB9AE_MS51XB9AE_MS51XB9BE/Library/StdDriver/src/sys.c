@@ -9,7 +9,7 @@
 //  E-Mail : MicroC-8bit@nuvoton.com
 //  Date   : Jan/21/2020
 //***********************************************************************************************************
-#include "MS51_16K.H"
+#include "MS51_16K.h"
 
 __bit BIT_TMP;
 unsigned char __data  TA_REG_TMP,BYTE_TMP,SFRS_TMP;

@@ -9,7 +9,7 @@
 /*  E-Mail : MicroC-8bit@nuvoton.com                                                                       */
 /*  Date   : Jan/21/2020                                                                                   */
 /***********************************************************************************************************/
-#include "MS51_16K.H"
+#include "MS51_16K.h"
 __bit PRINTFG = 0, uart0_receive_flag = 0, uart1_receive_flag;
 unsigned char uart0_receive_data, uart1_receive_data;
 

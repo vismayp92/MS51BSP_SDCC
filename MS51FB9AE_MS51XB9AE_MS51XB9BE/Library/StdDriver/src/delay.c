@@ -9,8 +9,7 @@
 //  E-Mail : MicroC-8bit@nuvoton.com
 //***********************************************************************************************************
 
-#include "MS51_16K.H"
-
+#include "MS51_16K.h"
  
 /**
   * @brief Timer0 delay setting 
